@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience and Affiliations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #809671;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #725c3a;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .menu-container {
+            position: relative;
+        }
+
+        .dropdown-button {
+            background-color: #5d4729;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 15px;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #b3b792;
+            color: #809671;
+        }
+
+        .menu-container:hover .dropdown-menu {
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .section {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .flashcard-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .flashcard {
+            background-color: #b3b792;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .flashcard:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .flashcard h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #5d4729;
+        }
+
+        .flashcard p {
+            font-size: 14px;
+            color: #555;
+            margin: 5px 0;
+        }
+        footer {
+            background-color: #725c3a;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            bottom: 0px
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #e5d2b8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Portfolio</h1>
+        <div class="menu-container">
+            <button class="dropdown-button">Menu</button>
+            <div class="dropdown-menu">
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Info.html">Information</a>
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Skill.html">Skill</a>
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Game.html">Sudoku Game</a>
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Work Experience Section -->
+        <div class="section" id="work-experience">
+            <h2>Work Experience</h2>
+            <div class="flashcard-container">
+                <div class="flashcard">
+                    <h3>OTHM IT Coordinator</h3>
+                    <p><strong>Institution:</strong> Business Institute Yangon College</p>
+                    <p><strong>Duration:</strong> September 2022 – March 2024</p>
+                    <p><strong>Responsibilities:</strong></p>
+                    <ul>
+                        <li>Coordinating/managing online students and Zoom classes.</li>
+                        <li>Sending emails, messages, links, documents, and other details between teachers and students.</li>
+                    </ul>
+                </div>
+                <div class="flashcard">
+                    <h3>ICT Assistant Teacher</h3>
+                    <p><strong>Institution:</strong> Heroes International School</p>
+                    <p><strong>Duration:</strong> June 2023 – February 2024</p>
+                    <p><strong>Responsibilities:</strong></p>
+                    <ul>
+                        <li>Clarifying topics and answering students’ questions when the teacher is occupied.</li>
+                        <li>Ensuring the computer room is set up for each class.</li>
+                        <li>Covering lessons when the main teacher is absent.</li>
+                    </ul>
+                </div>
+                <div class="flashcard">
+                    <h3>English Support Tutor</h3>
+                    <p><strong>Institution:</strong> Saigon Business School</p>
+                    <p><strong>Duration:</strong> October 2024 – Current</p>
+                    <p><strong>Responsibilities:</strong></p>
+                    <ul>
+                        <li>Reviewed and clarified assigned work with students.</li>
+                        <li>Planned activities and support materials to aid learning.</li>
+                        <li>Reported student progress to the main English teacher.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Affiliations and Activities Section -->
+        <div class="section" id="affiliations">
+            <h2>Affiliations and Activities</h2>
+            <div class="flashcard-container">
+                <div class="flashcard">
+                    <h3>Charter President</h3>
+                    <p><strong>Organization:</strong> Interact Club of Heroes Yangon</p>
+                    <p><strong>Duration:</strong> June 2023 – April 2024</p>
+                </div>
+                <div class="flashcard">
+                    <h3>Rotary Youth Leadership Award</h3>
+                    <p><strong>Organization:</strong> Rotary District 3350</p>
+                    <p><strong>Duration:</strong> October 2023</p>
+                </div>
+                <div class="flashcard">
+                    <h3>Certificate of Completion</h3>
+                    <p><strong>Topic:</strong> Effective Classroom Management Strategies</p>
+                    <p><strong>Institution:</strong> Heroes International School</p>
+                    <p><strong>Duration:</strong> August 2023</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Contact me at <a href="han.may0043@sbsuni.edu.vn">han.may0043@sbsuni.edu.vn</a> | Phone: <a href="tel:+84896383915">+84896383915</a></p>
+        <p>Follow me on GitHub: <a href="https://github.com/mmnhan" target="_blank">github.com/mmnhan</a></p>
+    </footer>
+</body>
+</html>

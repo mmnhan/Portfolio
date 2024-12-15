@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #809671;
+            color: #e5d2b8;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #725c3a;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .menu-container {
+            position: relative;
+        }
+
+        .dropdown-button {
+            background-color: #5d4729;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 15px;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #b3b792;
+            color: #809671;
+        }
+
+        .menu-container:hover .dropdown-menu {
+            display: block;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #e5e0d8;
+        }
+
+        .container {
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            color: #e5e0d8;
+            margin-bottom: 20px;
+        }
+
+        .columns {
+            display: flex;
+            gap: 20px;
+        }
+
+        .column {
+            flex: 1;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .progress {
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .novice { background-color: #f6eba6; width: 20%; }
+        .advanced-beginner { background-color: #f9ebc7; width: 40%; }
+        .competent { background-color: #b99470; width: 60%; }
+        .proficient { background-color: #c4661f; width: 80%; }
+        .expert { background-color: #783d19; width: 100%; }
+
+        footer {
+            background-color: #725c3a;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            bottom: 0px
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #e5d2b8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Portfolio</h1>
+        <div class="menu-container">
+            <button class="dropdown-button">Menu</button>
+            <div class="dropdown-menu">
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Info.html">Information</a>
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Work.html">Work Experience and Affiliations</a>
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Game.html">Sudoku Game</a>
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+    <h1>My Skills</h1>
+
+    <div class="container">
+        <!-- Technical Skills Section -->
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <div class="columns">
+                <!-- First Column -->
+                <div class="column">
+                    <p>Java</p>
+                    <div class="progress-bar">
+                        <div class="progress competent">Competent</div>
+                    </div>
+
+                    <p>Python</p>
+                    <div class="progress-bar">
+                        <div class="progress proficient">Proficient</div>
+                    </div>
+
+                    <p>JavaScript</p>
+                    <div class="progress-bar">
+                        <div class="progress competent">Competent</div>
+                    </div>
+
+                    <p>HTML</p>
+                    <div class="progress-bar">
+                        <div class="progress proficient">Proficient</div>
+                    </div>
+                </div>
+
+                <!-- Second Column -->
+                <div class="column">
+                    <p>Microsoft Word</p>
+                    <div class="progress-bar">
+                        <div class="progress expert">Expert</div>
+                    </div>
+
+                    <p>Microsoft Excel</p>
+                    <div class="progress-bar">
+                        <div class="progress proficient">Proficient</div>
+                    </div>
+
+                    <p>Microsoft PowerPoint</p>
+                    <div class="progress-bar">
+                        <div class="progress expert">Expert</div>
+                    </div>
+
+                    <p>Microsoft Access</p>
+                    <div class="progress-bar">
+                        <div class="progress competent">Competent</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Language Skills Section -->
+        <div class="section">
+            <h2>Language Skills</h2>
+
+            <p>Burmese</p>
+            <div class="progress-bar">
+                <div class="progress competent">Competent</div>
+            </div>
+
+            <p>English</p>
+            <div class="progress-bar">
+                <div class="progress proficient">Proficient</div>
+            </div>
+
+            <p>Mandarin</p>
+            <div class="progress-bar">
+                <div class="progress novice">Novice</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Contact me at <a href="han.may0043@sbsuni.edu.vn">han.may0043@sbsuni.edu.vn</a> | Phone: <a href="tel:+84896383915">+84896383915</a></p>
+        <p>Follow me on GitHub: <a href="https://github.com/mmnhan" target="_blank">github.com/mmnhan</a></p>
+    </footer>
+</body>
+
+</html>

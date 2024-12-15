@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1.0">
+    <title>Sudoku Puzzle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #809671;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #725c3a;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .menu-container {
+            position: relative;
+        }
+
+        .dropdown-button {
+            background-color: #5d4729;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 15px;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #b3b792;
+            color: #809671;
+        }
+
+        .menu-container:hover .dropdown-menu {
+            display: block;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .cell {
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 30px;
+            box-sizing: border-box;
+        }
+
+        .lightBackground {
+            background-color: #e5e0d8;
+        }
+
+        .darkBackground {
+            background-color: #b3b792;
+        }
+
+        .buttonContainer {
+            margin-top: 20px;
+            display: flex;
+            /* Ensure buttons are always displayed */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .buttonContainer button {
+            margin-right: 10px;
+            /* Add margin between buttons */
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+        }
+        footer {
+            background-color: #725c3a;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            bottom: 0px
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #e5d2b8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Portfolio</h1>
+        <div class="menu-container">
+            <button class="dropdown-button">Menu</button>
+            <div class="dropdown-menu">
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Info.html">Information</a>
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Work.html">Work Experience and Affiliations</a>
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Skill.html">Skill</a>
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container" id="container"></div>
+
+    <div class="buttonContainer">
+        <button id="solveButton">Solve</button>
+        <button id="resetButton">Reset</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.getElementById("container");
+
+            // Function to generate a random Sudoku puzzle
+            function generateRandomSudoku() {
+                // Placeholder function for generating a random puzzle (9x9)
+                const puzzle = [
+                    [5, 3, 0, 0, 7, 0, 0, 0, 0],
+                    [6, 0, 0, 1, 9, 5, 0, 0, 0],
+                    [0, 9, 8, 0, 0, 0, 0, 6, 0],
+                    [8, 0, 0, 0, 6, 0, 0, 0, 3],
+                    [4, 0, 0, 8, 0, 3, 0, 0, 1],
+                    [7, 0, 0, 0, 2, 0, 0, 0, 6],
+                    [0, 6, 0, 0, 0, 0, 2, 8, 0],
+                    [0, 0, 0, 4, 1, 9, 0, 0, 5],
+                    [0, 0, 0, 0, 8, 0, 0, 7, 9]
+                ];
+                return puzzle;
+            }
+
+            // Function to solve the Sudoku puzzle
+            function solveSudoku(board) {
+                // Placeholder function for solving Sudoku puzzle
+                const solvedPuzzle = JSON.parse(JSON.stringify(board));
+                solveHelper(solvedPuzzle);
+                return solvedPuzzle;
+            }
+
+            // Helper function for solving Sudoku recursively
+            function solveHelper(board) {
+                const emptyCell = findEmptyCell(board);
+                if (!emptyCell) {
+                    return true; // Puzzle solved
+                }
+
+                const [row, col] = emptyCell;
+                for (let num = 1; num <= 9; num++) {
+                    if (isValidMove(board, row, col, num)) {
+                        board[row][col] = num;
+                        if (solveHelper(board)) {
+                            return true;
+                        }
+                        board[row][col] = 0; // Backtrack
+                    }
+                }
+                return false; // No valid number found for this cell
+            }
+
+            // Function to find an empty cell in the Sudoku puzzle
+            function findEmptyCell(board) {
+                for (let row = 0; row < 9; row++) {
+                    for (let col = 0; col < 9; col++) {
+                        if (board[row][col] === 0) {
+                            return [row, col];
+                        }
+                    }
+                }
+                return null; // No empty cell found
+            }
+
+            // Function to check if a move is valid
+            function isValidMove(board, row, col, num) {
+                // Check row
+                for (let i = 0; i < 9; i++) {
+                    if (board[row][i] === num) {
+                        return false;
+                    }
+                }
+                // Check column
+                for (let i = 0; i < 9; i++) {
+                    if (board[i][col] === num) {
+                        return false;
+                    }
+                }
+                // Check 3x3 grid
+                const startRow = Math.floor(row / 3) * 3;
+                const startCol = Math.floor(col / 3) * 3;
+                for (let i = startRow; i < startRow + 3; i++) {
+                    for (let j = startCol; j < startCol + 3; j++) {
+                        if (board[i][j] === num) {
+                            return false;
+                        }
+                    }
+                }
+                return true; // Move is valid
+            }
+
+            // Function to create the Sudoku puzzle grid
+            function createSudokuGrid(puzzle) {
+                container.innerHTML = '';
+                puzzle.forEach((row, rowIndex) => {
+                    const rowElement = document.createElement('div');
+                    rowElement.classList.add('row');
+                    row.forEach((cell, columnIndex) => {
+                        const cellElement = document.createElement('input');
+                        cellElement.classList.add('cell');
+                        cellElement.classList
+                            .add((rowIndex + columnIndex) % 2 === 0 ?
+                                'lightBackground' : 'darkBackground');
+                        cellElement.type = 'text';
+                        cellElement.maxLength = 1;
+                        cellElement.value = cell !== 0 ? cell : '';
+                        rowElement.appendChild(cellElement);
+                    });
+                    container.appendChild(rowElement);
+                });
+            }
+
+            // Initialize puzzle
+            let initialPuzzle = generateRandomSudoku();
+            let puzzle = JSON.parse(JSON.stringify(initialPuzzle));
+            let solvedPuzzle = [];
+
+            // Function to solve the puzzle
+            function solvePuzzle() {
+                solvedPuzzle = solveSudoku(puzzle);
+                createSudokuGrid(solvedPuzzle);
+            }
+
+            // Function to reset the puzzle
+            function resetPuzzle() {
+                initialPuzzle = generateRandomSudoku();
+                puzzle = JSON.parse(JSON.stringify(initialPuzzle));
+                solvedPuzzle = [];
+                createSudokuGrid(puzzle);
+            }
+
+            // Initial puzzle creation
+            createSudokuGrid(puzzle);
+
+            // Attach event listeners to buttons
+            document.getElementById("solveButton")
+                .addEventListener("click", solvePuzzle);
+            document.getElementById("resetButton")
+                .addEventListener("click", resetPuzzle);
+        });  
+    </script>
+        <footer>
+            <p>Contact me at <a href="han.may0043@sbsuni.edu.vn">han.may0043@sbsuni.edu.vn</a> | Phone: <a href="tel:+84896383915">+84896383915</a></p>
+            <p>Follow me on GitHub: <a href="https://github.com/mmnhan" target="_blank">github.com/mmnhan</a></p>
+        </footer>
+</body>
+
+</html>

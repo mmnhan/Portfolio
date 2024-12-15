@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #809671;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #725c3a;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .menu-container {
+            position: relative;
+        }
+
+        .dropdown-button {
+            background-color: #5d4729;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 15px;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #b3b792;
+            color: #809671;
+        }
+
+        .menu-container:hover .dropdown-menu {
+            display: block;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .content {
+            flex: 2;
+            padding-right: 20px;
+        }
+
+        .content h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .content section {
+            margin-bottom: 20px;
+            background: #e5e0d8;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .content section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .content section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .content section p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+      list-style-image: url("tinyr.png");
+    }
+        footer {
+            background-color: #725c3a;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #e5d2b8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Portfolio</h1>
+        <div class="menu-container">
+            <button class="dropdown-button">Menu</button>
+            <div class="dropdown-menu">
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Work.html">Work Experience and Affiliations</a>
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Skill.html">Skill</a>
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Game.html">Sudoku Game</a>
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+            <h1>Information</h1>
+
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Mingalar Pr! I am May Myatnoe Han, you can address me as Noe Noe as well! :D My hometown is from Yangon, Myanmar and I am Chinese-Burmese. I was an ICT assistant teacher and an OTHM IT cooridindator in Yangon, Myanmar. I am a big foodie as well as a home baker, and I love exploring new places and playing games.
+                </p>
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                <p><b>Bachelor of Data Science</b>
+                    <br>Saigon Business School
+                    <br>2024-2028
+                </p>
+                <p><b>Navitas Foundation(Engineering)</b>
+                    <br>Yangon Institute for University Studies
+                    <br>2022-2023
+                </p>
+                <p><b>IGCSE 'O' Levels</b>
+                    <br>Myanmar International School Yangon
+                    <br>2020-2022
+                </p>
+            </section>
+
+            <section id="hobbies">
+                <h2>Hobbies</h2>
+                <p><ul style="list-style-type: url('tinyr.png');"> 
+                    <li>baking</li>
+                    <li>gaming</li>
+                    <li>tennis</li>
+                    <li>chess</li>
+                </ul></p>
+            </section>
+        </div>
+
+        <div class="image-container">
+            <img src="bittersweetcafe.jpg" alt="A picture of me">
+        </div>
+    </div>
+    <marquee>SAVE ME!!</marquee>
+
+    <footer>
+        <p>Contact me at <a href="han.may0043@sbsuni.edu.vn">han.may0043@sbsuni.edu.vn</a> | Phone: <a href="tel:+84896383915">+84896383915</a></p>
+        <p>Follow me on GitHub: <a href="https://github.com/mmnhan" target="_blank">github.com/mmnhan</a></p>
+    </footer>
+
+    <script>
+        console.log("Information page loaded successfully.");
+    </script>
+</body>
+</html>

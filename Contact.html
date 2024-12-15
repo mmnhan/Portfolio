@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #809671;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #725c3a;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .menu-container {
+            position: relative;
+        }
+
+        .dropdown-button {
+            background-color: #5d4729;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 15px;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #b3b792;
+            color: #809671;
+        }
+
+        .menu-container:hover .dropdown-menu {
+            display: block;
+        }
+
+        .contact-container {
+            background: #e5e0d8;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px 30px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .contact-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #222;
+        }
+
+        .contact-container p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .contact-container a {
+            color: #5d4729;
+            text-decoration: none;
+        }
+
+        .contact-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Portfolio</h1>
+        <div class="menu-container">
+            <button class="dropdown-button">Menu</button>
+            <div class="dropdown-menu">
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Info.html">Information</a>
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Work.html">Work Experience and Affiliations</a>
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Skill.html">Skill</a>
+                <a href="D:\SBS\2024SUBJECTS\WebD&D\MayMyatnoeHan\HTML\Game.html">Sudoku Game</a>
+            </div>
+        </div>
+    </header>
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <p>Email: <a href="han.may0043@sbsuni.edu.vn">han.may0043@sbsuni.edu.vn</a></p>
+        <p>Phone: <a href="tel:+84896383915">+84896383915</a></p>
+        <p>GitHub: <a href="https://github.com/mmnhan" target="_blank">github.com/mmnhan</a></p>
+    </div>
+
+    <script>
+        // Add any interactive JavaScript functionality if needed
+        console.log("Contact page loaded successfully.");
+    </script>
+</body>
+</html>
